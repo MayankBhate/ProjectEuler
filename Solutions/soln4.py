@@ -14,8 +14,10 @@ def is3digitfactor(num):
             return True
 
 
-n = 999*999     # Maximum product obtained from two 3 digit numbers.
-for j in range(n - 1, 101100, -1):
+maxprod = 999*999     # Maximum product obtained from two 3-digit numbers.
+minprod = 100*100     # Minimum product obtained from two 3-digit numbers.
+
+for j in range(maxprod, minprod-1, -1):
     if ispalindrome(j) and is3digitfactor(j):
         print(j)
         break
